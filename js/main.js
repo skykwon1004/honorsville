@@ -1,4 +1,16 @@
 $(function () {
+    // header
+    $(window).on('scroll', function () {
+        // console.log('스크롤 : ', $(window).scrollTop());   
+        if ($(window).scrollTop() > 0) {
+            $('.header_wrap').addClass('on');
+        } else {
+            $('.header_wrap').removeClass('on');
+        }
+    });
+
+
+    // main_slide
     $('.main_slide').slick({
         arrows: false,
         dots: false,
@@ -16,6 +28,12 @@ $(function () {
         $('.main_slide').slick('slickNext')
     });
 
+    // main_produt_slide
+    // $('.address_content').slick({
+    //     arrows: false,
+    //     slidesToShow: 3,
+
+    // });
 
 
 
@@ -25,7 +43,6 @@ $(function () {
 
 
 
-    
 
     // to top button
     $(window).on('scroll', function () {
