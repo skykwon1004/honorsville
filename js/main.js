@@ -35,6 +35,24 @@ $(function () {
 
     // });
 
+    $("#bgndVideo").YTPlayer({
+        videoURL: '481rZ1rInNc',
+        containment: '.main_youtube_bg',
+        // autoPlay: true, 
+        mute: true,
+        // startAt: 0, 
+        // opacity: 1
+        showControls: false,
+        playOnlyIfVisible: true,
+    });
+
+    $('.main_youtube_bg .play').on('click', function () {
+        $("#bgndVideo").YTPPlay();
+    });
+
+    $('.main_youtube_bg .pause').on('click', function () {
+        $("#bgndVideo").YTPPause();
+    });
 
 
 
